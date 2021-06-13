@@ -40,7 +40,10 @@ int main(int argc, char** argv)
     clock_t t1, t2;
 
     if(argc != 3)
+    {
+        printf("usage: %s threads number ", argv[0]);
         exit(1);
+    }
 
     k = strtol(argv[1], NULL, 0);
     n = strtol(argv[2], NULL, 0);

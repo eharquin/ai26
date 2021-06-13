@@ -12,7 +12,10 @@ int main(int argc, char** argv)
 
 
     if(argc != 2)
-        exit(0);
+    {
+        printf("usage: %s threads number ", argv[0]);
+        exit(1);
+    }
 
     n = strtol(argv[1], NULL, 0);
     tab = malloc(sizeof(char) * n);
